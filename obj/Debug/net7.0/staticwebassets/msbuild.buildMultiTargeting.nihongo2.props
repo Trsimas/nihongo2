@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\nihongo2.props" />
+</Project>
