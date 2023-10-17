@@ -2,8 +2,7 @@
 <div class="Container">
     <div class="row checkoutForm">
         <div>
-            <img src="~/images/Full-Cart-icon.png" width="30" height="35" />
-            <h4>Seu carrinho de compras : </h4>
+            <h4 class="ceasar">Seu carrinho de compras : </h4>
         </div>
         <table class="table table-bordered table-striped">
             <thead>
@@ -26,9 +25,8 @@
                             @((item.Quantidade * item.Item.Preco).ToString("c"))
                         </td>
                         <td class="text-center">
-                            <a asp-controller="Carrinho" asp-action="RemoverCarrinho"
-                                asp-route-itemid="@item.Item.ItemId"><img src="~/images/remover.png" width="20px"
-                                    height="20px" />
+                            <a asp-controller="Carrinho" class="text-danger" asp-action="RemoverCarrinho"
+                                asp-route-itemid="@item.Item.ItemId"><i class="bi bi-trash3"></i>
                             </a>
                         </td>
                     </tr>
@@ -46,10 +44,10 @@
 
         <div class="text-right">
             <div class="btn-group">
-                <a class="btn btn-success" asp-controller="Pedido" asp-action="Checkout">Encerrar Pedido</a>
+                <a class="btn btn-danger " asp-controller="Pedido" asp-action="Checkout">Encerrar Pedido</a>
 
                 &nbsp;&nbsp;&nbsp;
-                <a class="btn btn-primary" asp-controller="Item" asp-action="List">Continuar Comprando</a>
+                <a class="btn btn-outline-danger" asp-controller="Item" asp-action="List">Continuar Comprando</a>
             </div>
         </div>
         <br/>
