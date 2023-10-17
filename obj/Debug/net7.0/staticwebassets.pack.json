@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\dev\\nihongo2\\wwwroot\\imagens\\adm.png",
+      "PackagePath": "staticwebassets\\imagens\\adm.png"
+    },
+    {
       "Id": "C:\\dev\\nihongo2\\wwwroot\\imagens\\car.png",
       "PackagePath": "staticwebassets\\imagens\\car.png"
     },
@@ -21,8 +25,16 @@
       "PackagePath": "staticwebassets\\imagens\\casa.png"
     },
     {
+      "Id": "C:\\dev\\nihongo2\\wwwroot\\imagens\\fundologin.png",
+      "PackagePath": "staticwebassets\\imagens\\fundologin.png"
+    },
+    {
       "Id": "C:\\dev\\nihongo2\\wwwroot\\imagens\\logo.png",
       "PackagePath": "staticwebassets\\imagens\\logo.png"
+    },
+    {
+      "Id": "C:\\dev\\nihongo2\\wwwroot\\imagens\\new.png",
+      "PackagePath": "staticwebassets\\imagens\\new.png"
     },
     {
       "Id": "C:\\dev\\nihongo2\\wwwroot\\imagens\\sushi1.png",

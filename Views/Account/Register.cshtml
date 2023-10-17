@@ -1,0 +1,70 @@
+@model RegistroViewModel
+<table class="table">
+    <tr>
+       
+        </td>
+        <td>
+            <div class="row">
+                <div class="container bg-danger p-5">
+                <div class="col-9 col-md-9 col-lg-9">
+                    <h4 class="ceasar">Registrar usuário</h4>
+                    <form asp-controller="Account" asp-action="Register" method="post">
+                        <hr />
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group text-light">
+                            <label asp-for="UserName"> </label>
+                            <input asp-for="UserName" class="form-control" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-light">
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-light">
+                            <label asp-for="Nome"></label>
+                            <input asp-for="Nome" class="form-control" />
+                            <span asp-validation-for="Nome" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-light">
+                            <label asp-for="Endereco"></label>
+                            <input asp-for="Endereco" class="form-control" />
+                            <span asp-validation-for="Endereco" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-light">
+                            <label asp-for="Numero"></label>
+                            <input asp-for="Numero" class="form-control" />
+                            <span asp-validation-for="Numero" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-light">
+                            <label asp-for="Bairro"></label>
+                            <input asp-for="Bairro" class="form-control" />
+                            <span asp-validation-for="Bairro" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-light">
+                            <label asp-for="Cidade"></label>
+                            <input asp-for="Cidade" class="form-control" />
+                            <span asp-validation-for="Cidade" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-light">
+                            <label asp-for="Estado"></label>
+                            <input asp-for="Estado" class="form-control" />
+                            <span asp-validation-for="Estado" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-light">
+                            <label asp-for="Cep"></label>
+                            <input asp-for="Cep" class="form-control" />
+                            <span asp-validation-for="Cep" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-light">
+                            <div class="col-md-8 mt-2">
+                                <input type="submit" class="btn btn-outline-light" value="Registrar" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>

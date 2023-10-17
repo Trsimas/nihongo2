@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,6 +39,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light fs-5" asp-area="Admin" asp-controller="AdminItem" asp-action="Index">ITEM</a>
+                        </li>
+                        <li>
+                            @await Html.PartialAsync("_Login")
                         </li>
                     </ul>
                 </div>

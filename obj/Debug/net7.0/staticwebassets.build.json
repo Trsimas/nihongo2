@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NyAnf89/QyZ00XJImOr31D/ZP+0QfEWU/3KRWTVk+84=",
+  "Hash": "c7RH6nYwHBJ1PmcNars85aT9TzHHk9aMJtniF1zWesc=",
   "Source": "nihongo2",
   "BasePath": "_content/nihongo2",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\dev\\nihongo2\\wwwroot\\imagens\\adm.png",
+      "SourceId": "nihongo2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\dev\\nihongo2\\wwwroot\\",
+      "BasePath": "_content/nihongo2",
+      "RelativePath": "imagens/adm.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\adm.png"
+    },
+    {
       "Identity": "C:\\dev\\nihongo2\\wwwroot\\imagens\\car.png",
       "SourceId": "nihongo2",
       "SourceType": "Discovered",
@@ -119,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\imagens\\casa.png"
     },
     {
+      "Identity": "C:\\dev\\nihongo2\\wwwroot\\imagens\\fundologin.png",
+      "SourceId": "nihongo2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\dev\\nihongo2\\wwwroot\\",
+      "BasePath": "_content/nihongo2",
+      "RelativePath": "imagens/fundologin.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\fundologin.png"
+    },
+    {
       "Identity": "C:\\dev\\nihongo2\\wwwroot\\imagens\\logo.png",
       "SourceId": "nihongo2",
       "SourceType": "Discovered",
@@ -134,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagens\\logo.png"
+    },
+    {
+      "Identity": "C:\\dev\\nihongo2\\wwwroot\\imagens\\new.png",
+      "SourceId": "nihongo2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\dev\\nihongo2\\wwwroot\\",
+      "BasePath": "_content/nihongo2",
+      "RelativePath": "imagens/new.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\new.png"
     },
     {
       "Identity": "C:\\dev\\nihongo2\\wwwroot\\imagens\\sushi1.png",

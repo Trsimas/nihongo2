@@ -35,9 +35,14 @@
                             <a class="nav-link text-light fs-5" asp-area="" asp-controller="Home"
                                 asp-action="Index">HOME</a>
                         </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link text-light fs-5" asp-area="Admin" asp-controller="Admin"
-                                asp-action="Index">ADMIN</a>
+                        <li class="nav-item fs-5 me-3 ">
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <a class="nav-link" 
+                                asp-area="Admin" 
+                                asp-controller="Admin"
+                                asp-action="Index" class="text-light">Admin</a>
+                            }
                         </li>
                         <li class="nav-item ">
 
@@ -59,6 +64,9 @@
                         <li class="ms-5">
                             @await Component.InvokeAsync("CarrinhoResumo")
 
+                        </li>
+                        <li>
+                            @await Html.PartialAsync("_Login")
                         </li>
                     </ul>
                 </div>
