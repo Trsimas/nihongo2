@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\cs\\nihongo2\\nihongo2.csproj": {}
+    "C:\\dev\\nihongo2\\nihongo2.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\cs\\nihongo2\\nihongo2.csproj": {
+    "C:\\dev\\nihongo2\\nihongo2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\cs\\nihongo2\\nihongo2.csproj",
+        "projectUniqueName": "C:\\dev\\nihongo2\\nihongo2.csproj",
         "projectName": "nihongo2",
-        "projectPath": "C:\\Dev\\cs\\nihongo2\\nihongo2.csproj",
+        "projectPath": "C:\\dev\\nihongo2\\nihongo2.csproj",
         "packagesPath": "C:\\Users\\Aluno Dev\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\cs\\nihongo2\\obj\\",
+        "outputPath": "C:\\dev\\nihongo2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aluno Dev\\AppData\\Roaming\\NuGet\\NuGet.Config"
