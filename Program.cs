@@ -1,12 +1,17 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using nihongo2.Context;
 using nihongo2.Models;
 using nihongo2.Repositories;
 using nihongo2.Repositories.Interfaces;
+using nihongo2.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
+builder.Services.AddScoped<IUserRoleInicial, UserRoleInicial>();
+builder.Services.AddIdentity<UserAcount, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped(sp => Carrinho.GetCarrinhoCompra(sp));
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();
@@ -30,9 +35,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseSession();
+CriarPerfisUsuarios(app);
 
+app.UseSession();
+app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapControllerRoute(
 name: "categoriaFiltro",
 pattern: "Item/{action}/{categoria?}",
@@ -48,3 +56,12 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+static void CriarPerfisUsuarios(WebApplication app)
+{
+    var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
+    using var scope = scopedFactory?.CreateScope();
+    var service = scope?.ServiceProvider.GetService<IUserRoleInicial>();
+    service?.SeedRoles();
+    service?.SeedUsers();
+}

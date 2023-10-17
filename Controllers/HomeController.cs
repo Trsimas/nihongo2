@@ -1,10 +1,12 @@
 ﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using nihongo2.Models;
 using nihongo2.Repositories.Interfaces;
 using nihongo2.ViewModel;
 
 namespace nihongo2.Controllers;
+
 
 public class HomeController : Controller
 {
