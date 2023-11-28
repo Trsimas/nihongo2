@@ -1,10 +1,19 @@
-@model IEnumerable<nihongo2.Models.Item>
+@model ReflectionIT.Mvc.Paging.PagingList<nihongo2.Models.Item>
 
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1 class="ceasar">Index</h1>
+
+<form method="get" class="form-inline">
+    <input name="filtro" class="form-control" placeholder="filtro" value="@Model.RouteValue["Filtro"]" />
+    <button type="submit" class="btn btn-info">Procurar</button>
+</form>
+Total de Itens : @Model.TotalRecordCount
+<div>
+    <vc:pager paging-list="@Model"></vc:pager>
+</div>
 
 <p>
     <a asp-action="Create" class="btn btn-danger">Novo item</a>

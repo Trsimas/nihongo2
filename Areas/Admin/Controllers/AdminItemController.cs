@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using nihongo2.Models;
 using nihongo2.Context;
+using ReflectionIT.Mvc.Paging;
 
 namespace nihongo2.Areas.Admin.Controllers
 {
@@ -25,10 +26,19 @@ namespace nihongo2.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminItem
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string filtro, int pageindex = 1, string sort = "Nome")
         {
-            var appDbContext = _context.Itens.Include(i => i.Categoria);
-            return View(await appDbContext.ToListAsync());
+            var itenslist = _context.Itens.AsNoTracking().AsQueryable();
+
+            if (filtro != null)
+            {
+                itenslist = itenslist.Where(p => p.Nome.Contains(filtro));
+
+            }
+            var model = await PagingList.CreateAsync(itenslist, 5, pageindex, sort, "Nome");
+
+            model.RouteValue = new RouteValueDictionary{{"filtro", filtro}};
+            return View(model);
         }
 
         // GET: Admin/AdminItem/Details/5

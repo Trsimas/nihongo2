@@ -7,8 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using nihongo2.Context;
+using nihongo2.Migrations;
 using nihongo2.Models;
 using nihongo2.ViewModel;
+using ReflectionIT.Mvc.Paging;
 
 namespace nihongo2.Areas.Admin.Controllers
 {
@@ -24,9 +26,20 @@ namespace nihongo2.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminPedido
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string filtro, int pageindex = 1, string sort = "Nome")
         {
-              return View(await _context.Pedidos.ToListAsync());
+            var pedidoslist =
+
+            _context.Pedidos.AsNoTracking().AsQueryable();
+
+            if (filtro != null)
+            {
+                pedidoslist = pedidoslist.Where(p => p.Nome.Contains(filtro));
+            }
+            var model = await PagingList.CreateAsync(pedidoslist, 5, pageindex, sort, "Nome");
+
+            model.RouteValue = new RouteValueDictionary{{"filtro", filtro}};
+            return View(model);
         }
 
         // GET: Admin/AdminPedido/Details/5
